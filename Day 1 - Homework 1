@@ -1,0 +1,23 @@
+Pythonda veri tipleri: 
+Python da birçok dilde olduğu gibi metinsel, sayısal(tamsayı, ondalık sayı), mantıksal(doğru-yanlış) veri tipleri vardır. Diğer dillerde olduğu gibi veri tipini syntax ile belirtmeye gerek yoktur.
+
+
+
+
+Kodlama.io sitesinde değişken olarak kullanıldığını düşündüğüm veriler ve veri tipleri:
+kursAdi = "Yazılım Geliştirici Yetiştirme Kampı (JAVA + REACT)"   #kursAdi değişkeni metinsel (String) verileri tutmaktadır.
+kursaKayitliOgrenciSayisi = 1000  #kursaKayitliOgrenciSayisi değişkeni sayısal (integer) verileri tutmaktadır.
+odevYapildi = True # odevYapildi değişkeni mantıksal (true/false) verileri tutmaktadır.
+
+
+
+
+Kodlama.io sitesinde şart blokları kullanıldığını düşündüğüm kısımlar:
+Eğer ödev yapıldıysa ödeve ait puanın tamamlama yüzdesine eklendiğini ve eğer ödev yapılmadıysa "öğrenci ödevi yapmadı" notunun gösterildiğini düşünüyorum.
+
+tamamlamaYuzdesi = 0
+odevPuani = 6.25
+if odevYapildi:
+    tamamlamaYuzdesi = tamamlamaYuzdesi + odevpuani
+else:
+    print("öğrenci ödevi yapmadı")
