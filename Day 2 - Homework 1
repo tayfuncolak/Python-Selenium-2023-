@@ -1,0 +1,72 @@
+ogrenciListesi = ["Lionel Messi","Cristiano Ronaldo","Erling Haaland","Kylian Mbappe"]
+
+def ogrenciEkle():
+        isim = input("Öğrencinin İsmi: ")
+        soyisim = input("Öğrencinin Soyismi: ")
+        ogrenciListesi.append(isim + " " + soyisim)
+        print("Öğrenci listeye eklenmiştir.")
+
+def ogrenciSil():
+        isim = input("Öğrencinin İsmi: ")
+        soyisim = input("Öğrencinin Soyismi: ")
+        ogrenciListesi.remove(isim + " " + soyisim)
+        print("Öğrenci listeden silinmiştir.")
+
+def cokluOgrenciEkle():
+        eklemeAdedi = int(input("Eklenecek öğrenci adedini giriniz: "))
+        for i in range(eklemeAdedi):
+            ogrenciEkle()
+        print(f"{eklemeAdedi} yeni kayıt listeye eklenmiştir.")
+
+def cokluOgrenciSil():
+        silmeAdedi = int(input("Silinecek öğrenci adedini giriniz: "))
+        for i in range(silmeAdedi):
+            ogrenciSil()
+        print(f"{silmeAdedi} kayıt listeden silinmiştir.")
+
+def ogrenciNoGoster():
+        isim = input("öğrenci İsmi: ")
+        soyisim = input("Öğrenci Soyismi: ")
+        ogrenciNo = ogrenciListesi.index(isim +" " + soyisim)
+        print(f"Öğrencinin numarası: {ogrenciNo}")
+
+def OgrenciListesiniYazdir():
+        ogrenciNo = 0
+        for i in ogrenciListesi:
+            print(f"{ogrenciNo} {i}")
+            ogrenciNo += 1
+
+
+while True:
+    print("ÖĞRENCİ BİLGİ SİSTEMİ")
+    print("1- Öğrenci Ekle")
+    print("2- Öğrenci Sil")
+    print("3- Çoklu Öğrenci Ekle")
+    print("4- Çoklu Öğrenci Sil")
+    print("5- Öğrenci Numarası Öğren")
+    print("6- Öğrenci Listesi")
+    print("7- Sistemden Çık")
+    menuNo = input("İşlem Seçiniz: ")
+
+    if menuNo == "1":         
+        ogrenciEkle()
+    
+    elif menuNo == "2":
+        ogrenciSil()
+
+    elif menuNo == "3":
+        cokluOgrenciEkle()
+
+    elif menuNo == "4":
+        cokluOgrenciSil()
+    
+    elif menuNo == "5":
+        ogrenciNoGoster()
+    
+    elif menuNo == "6":
+        OgrenciListesiniYazdir()
+        
+    elif menuNo == "7":
+        break
+    else:                                              
+        print("Hatalı Menü Seçimi !!!" )   
